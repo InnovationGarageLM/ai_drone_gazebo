@@ -1,0 +1,169 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://concrete_ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://OutsideWallsWhite</uri>
+    </include>
+    <scene>
+      <sky>
+        <clouds>
+          <speed>0.6</speed> <!-- speed of clouds, default 0.6 -->
+          <humidity>0.7</humidity> <!-- density of clouds, default 0.5 -->
+          <mean_size>0.7</mean_size> <!-- average size of clouds, default 0.5 -->
+        </clouds>
+      </sky>
+      <shadows>false</shadows>
+      <origin_visual>false</origin_visual>
+    </scene>
+ <physics name='default_physics' default='0' type='ode'>
+      <gravity>0 0 -9.8066</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>10</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+      <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
+    </physics>
+   
+
+    <population name="tag0_population">
+      <model name="April Tag 16 5 0">
+        <include>
+          <static>true</static>
+          <uri>model://tag16_05_00000</uri>
+        </include>
+      </model>
+      <model_count>1</model_count>
+      <pose>0 0 0 0 0 0</pose>
+      <box>
+        <size>10 7 0.01</size>
+      </box>
+      <distribution>
+        <type>random</type>
+        <rows>40</rows>
+        <columns>28</columns>
+        <step>0.25 0.25 0</step>
+      </distribution>
+    </population>
+    <population name="tag1_population">
+      <model name="April Tag 16 5 1">
+        <include>
+          <static>true</static>
+          <uri>model://tag16_05_00001</uri>
+        </include>
+      </model>
+      <model_count>1</model_count>
+      <pose>0 0 0 0 0 0</pose>
+      <box>
+        <size>10 7 0.01</size>
+      </box>
+      <distribution>
+        <type>random</type>
+        <rows>40</rows>
+        <columns>28</columns>
+        <step>0.25 0.25 0</step>
+      </distribution>
+    </population>
+    <population name="tag2_population">
+      <model name="April Tag 16 5 2">
+        <include>
+          <static>true</static>
+          <uri>model://tag16_05_00002</uri>
+        </include>
+      </model>
+      <model_count>1</model_count>
+      <pose>0 0 0 0 0 0</pose>
+      <box>
+        <size>10 7 0.01</size>
+      </box>
+      <distribution>
+        <type>random</type>
+        <rows>40</rows>
+        <columns>28</columns>
+        <step>0.25 0.25 0</step>
+      </distribution>
+    </population>
+    <population name="tag3_population">
+      <model name="April Tag 16 5 3">
+        <include>
+          <static>true</static>
+          <uri>model://tag16_05_00003</uri>
+        </include>
+      </model>
+      <model_count>1</model_count>
+      <pose>0 0 0 0 0 0</pose>
+      <box>
+        <size>10 7 0.01</size>
+      </box>
+      <distribution>
+        <type>random</type>
+        <rows>40</rows>
+        <columns>28</columns>
+        <step>0.25 0.25 0</step>
+      </distribution>
+    </population>
+    <population name="tag4_population">
+      <model name="April Tag 16 5 4">
+        <include>
+          <static>true</static>
+          <uri>model://tag16_05_00004</uri>
+        </include>
+      </model>
+      <model_count>1</model_count>
+      <pose>0 0 0 0 0 0</pose>
+      <box>
+        <size>10 7 0.01</size>
+      </box>
+      <distribution>
+        <type>random</type>
+        <rows>40</rows>
+        <columns>28</columns>
+        <step>0.25 0.25 0</step>
+      </distribution>
+    </population>
+    <population name="tag5_population">
+      <model name="April Tag 16 5 5">
+        <include>
+          <static>true</static>
+          <uri>model://tag16_05_00005</uri>
+        </include>
+      </model>
+      <model_count>1</model_count>
+      <pose>0 0 0 0 0 0</pose>
+      <box>
+        <size>10 7 0.01</size>
+      </box>
+      <distribution>
+        <type>random</type>
+        <rows>40</rows>
+        <columns>28</columns>
+        <step>0.25 0.25 0</step>
+      </distribution>
+    </population>
+  </world>
+</sdf>

@@ -1,0 +1,18 @@
+material tag36_11_00004/Image
+    {
+      technique
+      {
+        pass
+        {
+
+          transparent_sorting off
+          alpha_rejection greater_equal 128
+
+          texture_unit
+          {
+            texture tag36_11_00004.png
+            
+          }
+        }
+      }
+    }
